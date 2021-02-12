@@ -14,15 +14,27 @@ function Yazilar(){
     // const titleInput = document.getElementById("title").value;
     // const descInput = document.getElementById("description").value;
 
-    
+    const [username, setUsername] = useState("");
+    const [title, setTitle] = useState("");
+    const [desc, setDesc] = useState("")
+    const usernameControl = (e) =>{
+        setUsername(e.target.value)
+    }
+    const titleControl = (e) =>{
+        setTitle(e.target.value)
+    }
+    const descControl = (e) =>{
+        setDesc(e.target.value)
+    }
     return(
         <>
-        <UserInputs/>
+        <UserInputs name={usernameControl} title={titleControl} desc={descControl}/>
             <div className="container">
                 <Usercart width>
                     <img src={avatar} alt="avatar"/>
-                    <H2>abdo</H2>
-                    <Strong>Web Dev</Strong>
+                    <H2>{username}</H2>
+                    <Strong>{title}</Strong>
+                    <p>{desc}</p>
                 </Usercart>
             </div>
         </>

@@ -14,9 +14,9 @@ function UserInputs({change, name, title, desc}){
         <>
         <div className="container">
             <UserInput>               
-                <input type="text" id="name" placeholder="Name" />
-                <input type="text" id="title" placeholder="Title"/>
-                <textarea name="description" id="description" rows="5" placeholder="Description"></textarea>
+                <input type="text" id="name" placeholder="Name" onChange={name} />
+                <input type="text" id="title" placeholder="Title" onChange={title}/>
+                <textarea name="description" id="description" rows="5" placeholder="Description" onChange={desc}></textarea>
                 <Button id="submit" type="submit" value="button" onClick={change} />
             
             </UserInput>
